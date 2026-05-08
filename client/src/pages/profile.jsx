@@ -1,6 +1,5 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext'; // Adjust path as needed
-import "./Profile.css";// Import the CSS file for styling
 
 const Profile = () => {
     const { user, loading } = useAuth();

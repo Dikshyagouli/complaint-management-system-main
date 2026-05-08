@@ -889,3 +889,223 @@ body {
   flex-basis: 70%;
   text-align: right;
 }
+
+
+/*profile jsx*/
+/*
+  Font Imports:
+  - You can use Google Fonts to find and import fonts.
+  - Example: @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  - For this design, I'll use a clean, modern font like Roboto or Poppins.
+*/
+
+/* Basic Reset & Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.profile-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  background-color: #6a11cb;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px 12px 0 0;
+  z-index: -1;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-details {
+  flex-grow: 1;
+}
+
+.profile-name-and-edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-details h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.profile-profession {
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.profile-ranking {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Profile Body */
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+}
+
+/* Sidebar */
+.left-sidebar {
+  width: 100%;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-section h3 {
+  font-size: 1.2rem;
+  color: #6a11cb;
+  border-bottom: 2px solid #2575fc;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.sidebar-section ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sidebar-section li {
+  background-color: #e6f0ff;
+  color: #3b5998;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #cce0ff;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-section li:hover {
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 40px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555;
+  width: 120px;
+  min-width: 120px;
+}
+
+.info-value {
+  color: #333;
+}
+
+/* Mobile-first approach - adjustments for smaller screens */
+@media (min-width: 768px) {
+  .profile-body {
+    flex-direction: row;
+  }
+
+  .left-sidebar {
+    width: 250px;
+    min-width: 250px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: none;
+    padding-right: 20px;
+  }
+
+  .main-content {
+    padding-left: 40px;
+  }
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #777;
+}
